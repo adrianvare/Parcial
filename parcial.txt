@@ -1,0 +1,16 @@
+Parcial 1
+
+SCP
+Copia de archivos:
+
+vagrant scp archivo.txt servidor:archivo.txt
+
+
+
+Tunel NGROK
+Modificar el vagrantfile e insertar la siguiente linea:
+
+config.vm.network "forwarded_port", guest: 80, host: 8080
+
+*registrarse en ngrok.com obtener token y ejecutar: ./ngrok authtoken +token
+*ejecutar: ./ngrok http 80
